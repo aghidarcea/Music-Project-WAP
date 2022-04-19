@@ -8,7 +8,7 @@ exports.login = (req, res, next) => {
     const password = req.query.password;
     const result = User.login(username, password);
     if(result == undefined)
-        res.status(401).send("Login failed");
+        res.status(401).send("Login failed! Check your credentials and try again.");
     else
         res.status(200).send(result);
 }

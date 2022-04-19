@@ -7,17 +7,17 @@
 </head>
 <body>
     <div class="header">
-        <h1 id="logo">User123's bootleg spotify</h1>
+        <h1 id="logo"></h1>
         <form class="seachForm" action="searchSong" method="POST">
             <label for="search">Search song:</label>
             <input id="inputSearch" type="text" id="search" name="search">
             <input id="buttonSearch" class="buttonInput" type="submit" value=">"><br>
         </form> 
-        <form class="loginForm" action="logout" method="POST">
+        <form class="loginForm" id="logoutForm">
             <input class="buttonInput" type="submit" value="Logout"><br>
         </form> 
     </div>
-    <!--script src="scripts/trySt.js"></script-->
+    <script src="../scripts/user.js"></script>
     <div class="musicTable">
     <h2>Music you might be interested in:</h2>
     <table>

@@ -34,6 +34,7 @@ input
     position: absolute;
     right: 20px;
     font-size: 1em;
+    border: 2px black;
 }
 
 #logo
@@ -102,4 +103,12 @@ tr:nth-child(even)
 .musicTable
 {
     margin-top: 40px;
+}
+
+/* Here is the animation (keyframes) */
+@keyframes fading 
+{
+    0% { opacity: 1; }
+    30% { opacity: 0.9;}
+    100% { opacity: 0; }
 }
