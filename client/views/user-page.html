@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Music</title>
+<meta name="description" content="User page">
+<link rel="stylesheet" type="text/css" href="../style/my-style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 id="logo">User123's bootleg spotify</h1>
+        <form class="seachForm" action="searchSong" method="POST">
+            <label for="search">Search song:</label>
+            <input id="inputSearch" type="text" id="search" name="search">
+            <input id="buttonSearch" class="buttonInput" type="submit" value=">"><br>
+        </form> 
+        <form class="loginForm" action="logout" method="POST">
+            <input class="buttonInput" type="submit" value="Logout"><br>
+        </form> 
+    </div>
+    <!--script src="scripts/trySt.js"></script-->
+    <div class="musicTable">
+    <h2>Music you might be interested in:</h2>
+    <table>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Release date</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>Wockesha</td>
+          <td>10/10/2021</td>
+          <td><button>+</button></td>
+        </tr>
+        <tr>
+          <td>101</td>
+          <td>If Pain Was A Person</td>
+          <td>04/21/2021</td>
+          <td><button>+</button></td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>Hard for the next</td>
+          <td>03/23/2021</td>
+          <td><button>+</button></td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>Yessir</td>
+          <td>11/14/2019</td>
+          <td><button>+</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="musicTable">
+      <h2>Your playlist:</h2>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>Wockesha</td>
+          <td><button>-</button><button>></button></td>
+        </tr>
+        <tr>
+          <td>101</td>
+          <td>If Pain Was A Person</td>
+          <td><button>-</button><button>></button></td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>Hard for the next</td>
+          <td><button>-</button><button>></button></td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>Yessir</td>
+          <td><button>-</button><button>></button></td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>
