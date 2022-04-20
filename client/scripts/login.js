@@ -43,5 +43,5 @@ function showLoginError(text)
     loginErrorText.hidden = false;
     loginErrorText.innerHTML = text;
     loginErrorText.style.animation = 'fading 4s';
-    setTimeout(() => { loginErrorText.hidden = 'true'; }, 3900);
+    setTimeout(() => { loginErrorText.hidden = true; }, 3900);
 }

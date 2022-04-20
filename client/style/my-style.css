@@ -105,6 +105,12 @@ tr:nth-child(even)
     margin-top: 40px;
 }
 
+#allSongsTableDiv
+{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
 /* Here is the animation (keyframes) */
 @keyframes fading 
 {
