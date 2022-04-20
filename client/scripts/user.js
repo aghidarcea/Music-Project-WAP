@@ -1,5 +1,7 @@
 var myAudio;
+var timerLabel;
 var isPlaying;
+var songDuration;
 
 window.onload = function() {
     document.getElementById('logo').innerText = sessionStorage.getItem('userName') + "'s bootleg spotify";
@@ -16,7 +18,29 @@ window.onload = function() {
     };
 
     myAudio = document.getElementById("audio");
+    timerLabel = document.getElementById("timer")
     isPlaying = false;
+
+    myAudio.addEventListener("timeupdate", function() {
+        var currentTime = myAudio.currentTime;
+        var duration = myAudio.duration;
+        hpRange = document.getElementsByClassName('hp_range')[0];
+        hpRange.style.width = currentTime/duration*100+'%';
+
+        let minutes = Math.floor(currentTime / 60);
+        let seconds = Math.round(currentTime - minutes * 60);
+        currentTime = minutes + ':' + seconds;
+
+        if(songDuration == "NaN:NaN" || songDuration == undefined)
+        {
+            minutes = Math.floor(duration / 60);
+            seconds = Math.round(duration - minutes * 60);
+            songDuration = minutes + ':' + seconds;
+            return;
+        }
+
+        timerLabel.innerHTML = currentTime + ' / ' + songDuration;
+    });
 }
 
 function logout()
@@ -137,7 +161,12 @@ function changeSong(srcPath)
     }
 
     myAudio.src=srcPath;
+    const playingLabel = document.getElementById("nowPlaying");
+    const songName = srcPath.split('/')[3].split('.')[0];
+    timerLabel.innerHTML = "";
+    songDuration = undefined;
 
+    playingLabel.innerHTML = "Now playing: " + songName;
     myAudio.play();
     isPlaying = true;
 }

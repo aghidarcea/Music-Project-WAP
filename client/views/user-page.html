@@ -17,18 +17,26 @@
             <input class="buttonInput" type="submit" value="Logout"><br>
         </form> 
     </div>
+    <div>
+      <h2>Music you might be interested in:</h2>
+      <div id="allSongsTableDiv" class="musicTable">
+      <table id="allSongsTable"></table>
+      </div>
+      <div id="playlistTableDiv" class="musicTable">
+        <h2>Your playlist:</h2>
+        <h2 id="noPlaylist" hidden="true">No songs in your playlist</h2>
+        <table id="playlistTable">
+        </table>
+      </div>
+    <div class="musicPlayer">
+      <p id="timer"></p>
+      <p id="nowPlaying">Select a song from your playlist to play...</p>
+      <button id="btnPlay" onclick="play()">PLAY/PAUSE</button>
+        <div class="hp_slide">
+          <div class="hp_range"></div>
+        </div>
+      <audio id="audio"></audio>
+    </div>
     <script src="../scripts/user.js"></script>
-    <div id="allSongsTableDiv" class="musicTable">
-    <h2>Music you might be interested in:</h2>
-    <table id="allSongsTable"></table>
-    </div>
-    <div class="musicTable">
-      <h2>Your playlist:</h2>
-      <h2 id="noPlaylist" hidden="true">No songs in your playlist</h2>
-      <table id="playlistTable">
-      </table>
-    </div>
-    <button onclick="play()">PLAY/PAUSE</button>
-    <audio id="audio"></audio>
 </body>
 </html>
